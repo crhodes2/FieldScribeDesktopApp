@@ -1,0 +1,367 @@
+3,1,1,Men's 4 x 100m Relay (Varsity),,,,,,400
+,,3,Roosevelt,,ROOS A
+,,4,Lincoln,,LINC A
+,,5,Franklin,,FRAN A
+2,1,1,Men's 4 x 100m Relay (JV),,,,,,400
+,,4,Franklin,,FRAN A
+,,5,Roosevelt,,ROOS A
+4,1,1,Women's 4 x 100m Relay (Varsity),,,,,,400
+,,4,Lincoln,,LINC A
+,,5,Franklin,,FRAN A
+1,1,1,Women's 4 x 100m Relay (JV),,,,,,400
+,,3,Roosevelt,,ROOS A
+,,4,Franklin,,FRAN A
+,,5,Lincoln,,LINC A
+38,1,1,Men's 4 x 400m Relay (Varsity),,,,,,1600
+,,4,Franklin,,FRAN A
+,,5,Lincoln,,LINC A
+37,1,1,Men's 4 x 400m Relay (JV),,,,,,1600
+,,2,Franklin,,FRAN B
+,,3,Franklin,,FRAN A
+,,6,Lincoln,,LINC A
+,,7,Lincoln,,LINC B
+40,1,1,Women's 4 x 400m Relay (Varsity),,,,,,1600
+,,4,Lincoln,,LINC A
+,,5,Franklin,,FRAN A
+39,1,1,Women's 4 x 400m Relay (JV),,,,,,1600
+,,1,Lincoln,,LINC D
+,,2,Lincoln,,LINC B
+,,3,Lincoln,,LINC A
+,,5,Franklin,,FRAN C
+,,6,Franklin,,FRAN A
+,,7,Lincoln,,LINC C
+,,8,Franklin,,FRAN B
+41,1,1,Men's High Jump (Varsity),HJ1
+,6,1,Berger,Max,Franklin
+,40,2,Demmings,James,Franklin
+,271,3,Holstun,Tucker,Lincoln
+,301,4,Ludiker,Nolan,Lincoln
+,381,5,Wilson,Kai,Lincoln
+,88,6,Johnson,Evan,Franklin
+43,1,1,Men's High Jump (JV),HJ1
+,194,1,Anastas,Aidan,Lincoln
+,22,2,Case,Logan,Franklin
+,11,3,Bowen,Anthony,Franklin
+,115,4,Mundorff,Nicholas,Franklin
+,132,5,Pellicci,Tucker,Franklin
+,440,6,LyDay,Jalen,Roosevelt
+,436,7,Kelly,Jalen,Roosevelt
+,156,8,Sweazey,Jayden,Franklin
+,362,9,Sullivan,Brendan,Lincoln
+,461,10,Sanders,Keyshawn,Roosevelt
+,273,11,Howe,Gardner Terrell,Lincoln
+,223,12,Christopher,Sawyer,Lincoln
+42,1,1,Women's High Jump (Varsity),HJ1
+,122,1,Nguyen,Sydney,Franklin
+,1,2,Kary,Logan,Franklin
+,112,3,Miller,Loghan,Franklin
+,202,4,Baines,Adia,Lincoln
+,264,5,Hamilton,Stephanie,Lincoln
+,232,6,Denham,Sydney,Lincoln
+,348,7,Schreiter,Sadie,Lincoln
+44,1,1,Women's High Jump (JV),HJ1
+,149,1,Sopher,Camellia,Franklin
+,366,2,Thigpen,Alison,Lincoln
+,379,3,Williamson,Ella,Lincoln
+,212,4,Boyd,Mina,Lincoln
+,228,5,Courogen,Fiona,Lincoln
+,376,6,Whitworth,Ellie,Lincoln
+,348,7,Schreiter,Sadie,Lincoln
+,200,8,Auth,Kaitlyn,Lincoln
+,275,9,Hutchinson,Fiona,Lincoln
+45,1,1,Men's Pole Vault (Varsity),PV1
+,145,1,Rose,Joey,Franklin
+,88,2,Johnson,Evan,Franklin
+,329,3,Piesner,Sam,Lincoln
+,306,4,McInroy-Edwards,Jordan,Lincoln
+,374,5,Weinbach,Lukas,Lincoln
+47,1,1,Men's Pole Vault (JV),PV1
+,30,1,Copp,Lucas,Franklin
+,106,2,Meier,Timothy,Franklin
+,85,3,Ignacio,Angelo,Franklin
+,14,4,Bui,Andy,Franklin
+,103,5,McConnell,Acme,Franklin
+,328,6,Pickett,Casey,Lincoln
+,160,7,Tackett,Dylan,Franklin
+,351,8,Servo,Gabriel,Lincoln
+,291,9,Lambert,Christopher,Lincoln
+46,1,1,Women's Pole Vault (Varsity),PV1
+,71,1,Harbison,Nora,Franklin
+,12,2,Brown,Sadie,Franklin
+,288,3,Kono,Emilie,Lincoln
+,326,4,Pavlock,Kiomi,Lincoln
+,246,5,Fine,Maya,Lincoln
+48,1,1,Women's Pole Vault (JV),PV1
+,120,1,Nguyen,Mary,Franklin
+,171,2,Van,Emma,Franklin
+,217,3,Carnes,Mckenzie,Lincoln
+,116,4,Naimo,Elsa,Franklin
+,236,5,Donnelly,Kayla,Lincoln
+,238,6,Duong,Megan,Lincoln
+,367,7,Titcomb,Senna,Lincoln
+,282,8,Kanzaki,Sarah,Lincoln
+,205,9,Bauer,Samantha,Lincoln
+49,1,1,Men's Long Jump (Varsity),LJ1
+,301,1,Ludiker,Nolan,Lincoln
+,374,2,Weinbach,Lukas,Lincoln
+,467,3,Slaughter,Kale'anahe,Roosevelt
+,320,4,Nguyen,Kevin,Lincoln
+,17,5,Busani,Anthony,Franklin
+,442,6,Mangat,Prabhjot,Roosevelt
+,40,7,Demmings,James,Franklin
+,47,8,Elliott-Reed,Micheal,Franklin
+,415,9,Figueroa,Cabree,Roosevelt
+51,1,1,Men's Long Jump (JV),LJ1
+,324,1,Page,Spencer,Lincoln
+,353,2,Shaver,Jacob,Lincoln
+,337,3,Reynolds,Benjamin,Lincoln
+,115,4,Mundorff,Nicholas,Franklin
+,434,5,Kaplan,Bryce,Roosevelt
+,295,6,Leikem,Blake,Lincoln
+,478,7,White,Osric,Roosevelt
+,261,8,Halversen,Conner,Lincoln
+,260,9,Hall,Marshall,Lincoln
+,329,10,Piesner,Sam,Lincoln
+,181,11,Worley,Simon,Franklin
+,362,12,Sullivan,Brendan,Lincoln
+,6,13,Berger,Max,Franklin
+,273,14,Howe,Gardner Terrell,Lincoln
+,338,15,Rice,Brock,Lincoln
+,480,16,Williams,Reyjon,Roosevelt
+,247,17,Flinders,Ryan,Lincoln
+,161,18,Taylor,Julian,Franklin
+50,1,1,Women's Long Jump (Varsity),LJ1
+,425,1,Hayes-Tanner,Melieah,Roosevelt
+,275,2,Hutchinson,Fiona,Lincoln
+,1,3,Kary,Logan,Franklin
+,296,4,Leon,Nathalia,Lincoln
+,169,5,Tran,Vivian,Franklin
+,264,6,Hamilton,Stephanie,Lincoln
+,153,7,Strong,Cameron,Franklin
+52,1,1,Women's Long Jump (JV),LJ1
+,149,1,Sopher,Camellia,Franklin
+,171,2,Van,Emma,Franklin
+,154,3,Sugnet,Jule,Franklin
+,116,4,Naimo,Elsa,Franklin
+,71,5,Harbison,Nora,Franklin
+,32,6,Cruz,Astrid,Franklin
+,120,7,Nguyen,Mary,Franklin
+,41,8,Dodd,Sophia,Franklin
+,57,9,Garcia,Gabby,Franklin
+,179,10,Winkler,Kata,Franklin
+,212,11,Boyd,Mina,Lincoln
+,272,12,Homsi,Isabel,Lincoln
+,130,13,Pearmine,Parker,Franklin
+,166,14,Thompson,Emma,Franklin
+53,1,1,Men's Triple Jump (Varsity),TJ1
+,6,1,Berger,Max,Franklin
+,156,2,Sweazey,Jayden,Franklin
+,320,3,Nguyen,Kevin,Lincoln
+,442,4,Mangat,Prabhjot,Roosevelt
+,420,5,Greene,Josiah,Roosevelt
+,88,6,Johnson,Evan,Franklin
+,415,7,Figueroa,Cabree,Roosevelt
+55,1,1,Men's Triple Jump (JV),TJ1
+,17,1,Busani,Anthony,Franklin
+,181,2,Worley,Simon,Franklin
+,337,3,Reynolds,Benjamin,Lincoln
+,115,4,Mundorff,Nicholas,Franklin
+,351,5,Servo,Gabriel,Lincoln
+54,1,1,Women's Triple Jump (Varsity),TJ1
+,169,1,Tran,Vivian,Franklin
+,112,2,Miller,Loghan,Franklin
+,288,3,Kono,Emilie,Lincoln
+,246,4,Fine,Maya,Lincoln
+,153,5,Strong,Cameron,Franklin
+56,1,1,Women's Triple Jump (JV),TJ1
+,57,1,Garcia,Gabby,Franklin
+,1,2,Kary,Logan,Franklin
+,171,3,Van,Emma,Franklin
+,154,4,Sugnet,Jule,Franklin
+,32,5,Cruz,Astrid,Franklin
+,41,6,Dodd,Sophia,Franklin
+,149,7,Sopher,Camellia,Franklin
+,120,8,Nguyen,Mary,Franklin
+,122,9,Nguyen,Sydney,Franklin
+,8,10,Bingham,Charmane,Franklin
+,33,11,Davis,Diona,Franklin
+,179,12,Winkler,Kata,Franklin
+,130,13,Pearmine,Parker,Franklin
+57,1,1,Men's Shot Put (Varsity),SP1
+,413,1,Ferguson,Sage,Roosevelt
+,10,2,Bledsoe,Zane,Franklin
+,353,3,Shaver,Jacob,Lincoln
+,133,4,Peraza,Xavier,Franklin
+,330,5,Plew,Jack,Lincoln
+,472,6,Talanoa,Lata,Roosevelt
+,343,7,Rodgers,Phil,Lincoln
+,109,8,Merrifield,James,Franklin
+,471,9,Taka,Gene,Roosevelt
+59,1,1,Men's Shot Put (JV),SP1
+,463,1,Schreiber,Jacob,Roosevelt
+,187,2,Abel,Asher,Lincoln
+,67,3,Hamilton,Lacinda,Franklin
+,310,4,Menezes,Robert,Lincoln
+,117,5,Nelson,Calvin,Franklin
+,127,6,Oman,Will,Franklin
+,151,7,Staudenmaier,Hayden,Franklin
+,478,8,White,Osric,Roosevelt
+,21,9,Carroll,Garrett,Franklin
+,104,10,McCoy,Nathaniel,Franklin
+,123,11,Nine,Jordan,Franklin
+,58,12,Gauss,Nick,Franklin
+,23,13,Cazares,Ramiro,Franklin
+,85,14,Ignacio,Angelo,Franklin
+,35,15,Dawson,Dominic,Franklin
+,132,16,Pellicci,Tucker,Franklin
+,469,17,Steele-Puma,Gabriel,Roosevelt
+,311,18,Mesch,Jacob,Lincoln
+,287,19,Kono,Caleb,Lincoln
+,229,20,Crawford,Andrew,Lincoln
+,150,21,Sparks,Brody,Franklin
+,231,22,Daniel,Seth,Lincoln
+,10,23,Bledsoe,Zane,Franklin
+,3,24,Avila-Ortiz,Francisco,Franklin
+,426,25,Hoach,Andrew,Roosevelt
+58,1,1,Women's Shot Put (Varsity),SP1
+,182,1,Young,Dore,Franklin
+,274,2,Huard,Harley,Lincoln
+,179,3,Winkler,Kata,Franklin
+,251,4,Frankovic,Rachael,Lincoln
+,414,5,Fifita,Siulai,Roosevelt
+,222,6,Christopher,Piper,Lincoln
+,419,7,Greely,Sierra,Roosevelt
+,155,8,Suria,Kathya,Franklin
+,452,9,Nordstrom,Ahliah,Roosevelt
+60,1,1,Women's Shot Put (JV),SP1
+,479,1,White,Stephanie,Roosevelt
+,208,2,Beekley,Tess,Lincoln
+,141,3,Reed,Alyssa,Franklin
+,402,4,Carroll,Sierra,Roosevelt
+,184,5,Yucho,Ella,Franklin
+,99,6,Lawson,Aurora,Franklin
+,422,7,Grover,Jonica,Roosevelt
+,201,8,Babbie,Evelyn,Lincoln
+,341,9,Roberts,Peyton,Lincoln
+,185,10,Zenor,Jade,Franklin
+,221,11,Chow,Angela,Lincoln
+,384,12,Wood,Elizabeth,Lincoln
+,195,13,Anastas,Mia,Lincoln
+,282,14,Kanzaki,Sarah,Lincoln
+,196,15,Anderson,Charlotte,Lincoln
+,447,16,Molina,Litzi,Roosevelt
+,262,17,Halverson,Amara,Lincoln
+61,1,1,Men's Discus (Varsity),DT1
+,229,1,Crawford,Andrew,Lincoln
+,104,2,McCoy,Nathaniel,Franklin
+,231,3,Daniel,Seth,Lincoln
+,3,4,Avila-Ortiz,Francisco,Franklin
+,330,5,Plew,Jack,Lincoln
+,472,6,Talanoa,Lata,Roosevelt
+,109,7,Merrifield,James,Franklin
+,480,8,Williams,Reyjon,Roosevelt
+,471,9,Taka,Gene,Roosevelt
+63,1,1,Men's Discus (JV),DT1
+,287,1,Kono,Caleb,Lincoln
+,85,2,Ignacio,Angelo,Franklin
+,127,3,Oman,Will,Franklin
+,67,4,Hamilton,Lacinda,Franklin
+,463,5,Schreiber,Jacob,Roosevelt
+,310,6,Menezes,Robert,Lincoln
+,58,7,Gauss,Nick,Franklin
+,117,8,Nelson,Calvin,Franklin
+,35,9,Dawson,Dominic,Franklin
+,123,10,Nine,Jordan,Franklin
+,151,11,Staudenmaier,Hayden,Franklin
+,21,12,Carroll,Garrett,Franklin
+,311,13,Mesch,Jacob,Lincoln
+,132,14,Pellicci,Tucker,Franklin
+,469,15,Steele-Puma,Gabriel,Roosevelt
+,10,16,Bledsoe,Zane,Franklin
+,150,17,Sparks,Brody,Franklin
+,324,18,Page,Spencer,Lincoln
+,20,19,Carlson,Cody,Franklin
+,435,20,Kate,Yvan,Roosevelt
+,413,21,Ferguson,Sage,Roosevelt
+62,1,1,Women's Discus (Varsity),DT1
+,185,1,Zenor,Jade,Franklin
+,182,2,Young,Dore,Franklin
+,195,3,Anastas,Mia,Lincoln
+,447,4,Molina,Litzi,Roosevelt
+,155,5,Suria,Kathya,Franklin
+,278,6,Jesson,Colette,Lincoln
+,414,7,Fifita,Siulai,Roosevelt
+,222,8,Christopher,Piper,Lincoln
+,452,9,Nordstrom,Ahliah,Roosevelt
+64,1,1,Women's Discus (JV),DT1
+,184,1,Yucho,Ella,Franklin
+,365,2,Taylor,Audrey,Lincoln
+,141,3,Reed,Alyssa,Franklin
+,479,4,White,Stephanie,Roosevelt
+,208,5,Beekley,Tess,Lincoln
+,402,6,Carroll,Sierra,Roosevelt
+,213,7,Bui,Caitlin,Lincoln
+,201,8,Babbie,Evelyn,Lincoln
+,422,9,Grover,Jonica,Roosevelt
+,326,10,Pavlock,Kiomi,Lincoln
+,221,11,Chow,Angela,Lincoln
+,274,12,Huard,Harley,Lincoln
+,251,13,Frankovic,Rachael,Lincoln
+,341,14,Roberts,Peyton,Lincoln
+,384,15,Wood,Elizabeth,Lincoln
+,99,16,Lawson,Aurora,Franklin
+,309,17,Mena-Rangel,Emily,Lincoln
+65,1,1,Men's Javelin (Varsity),JT1
+,231,1,Daniel,Seth,Lincoln
+,150,2,Sparks,Brody,Franklin
+,220,3,Chinnam,Srinik,Lincoln
+,467,4,Slaughter,Kale'anahe,Roosevelt
+,104,5,McCoy,Nathaniel,Franklin
+,472,6,Talanoa,Lata,Roosevelt
+,109,7,Merrifield,James,Franklin
+,324,8,Page,Spencer,Lincoln
+,471,9,Taka,Gene,Roosevelt
+67,1,1,Men's Javelin (JV),JT1
+,194,1,Anastas,Aidan,Lincoln
+,23,2,Cazares,Ramiro,Franklin
+,117,3,Nelson,Calvin,Franklin
+,123,4,Nine,Jordan,Franklin
+,58,5,Gauss,Nick,Franklin
+,127,6,Oman,Will,Franklin
+,21,7,Carroll,Garrett,Franklin
+,14,8,Bui,Andy,Franklin
+,413,9,Ferguson,Sage,Roosevelt
+,353,10,Shaver,Jacob,Lincoln
+,20,11,Carlson,Cody,Franklin
+,151,12,Staudenmaier,Hayden,Franklin
+,478,13,White,Osric,Roosevelt
+,132,14,Pellicci,Tucker,Franklin
+,3,15,Avila-Ortiz,Francisco,Franklin
+,19,16,Carlsen,Clifford,Franklin
+,160,17,Tackett,Dylan,Franklin
+66,1,1,Women's Javelin (Varsity),JT1
+,99,1,Lawson,Aurora,Franklin
+,221,2,Chow,Angela,Lincoln
+,8,3,Bingham,Charmane,Franklin
+,155,4,Suria,Kathya,Franklin
+,445,5,Mizee,Breanna,Roosevelt
+,452,6,Nordstrom,Ahliah,Roosevelt
+,419,7,Greely,Sierra,Roosevelt
+,196,8,Anderson,Charlotte,Lincoln
+,278,9,Jesson,Colette,Lincoln
+68,1,1,Women's Javelin (JV),JT1
+,396,1,Boyd,Isobel,Roosevelt
+,112,2,Miller,Loghan,Franklin
+,195,3,Anastas,Mia,Lincoln
+,141,4,Reed,Alyssa,Franklin
+,184,5,Yucho,Ella,Franklin
+,307,6,Melville,Alexandra,Lincoln
+,182,7,Young,Dore,Franklin
+,384,8,Wood,Elizabeth,Lincoln
+,185,9,Zenor,Jade,Franklin
+,232,10,Denham,Sydney,Lincoln
+,414,11,Fifita,Siulai,Roosevelt
+,348,12,Schreiter,Sadie,Lincoln
+,341,13,Roberts,Peyton,Lincoln
+,421,14,Greene,Taylor,Roosevelt
+,197,15,Andoh,Ella,Lincoln

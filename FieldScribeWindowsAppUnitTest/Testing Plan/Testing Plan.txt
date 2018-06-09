@@ -1,0 +1,8 @@
+﻿1) Create a New Meet
+	a) Test Adding a new meet with name only. Exclude anything else.
+	b) Test Adding a new meet with name and date only.
+	c) Test Adding a new meet with name, date, and location only.
+	d) Test Adding a new meet with all the above except measurement system. (Same as c)
+	e) Test Adding new meet but not saving it to the Azure database.
+
+2) Create a New Athlete in Meet

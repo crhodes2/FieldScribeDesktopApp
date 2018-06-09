@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="Fieldscribe_Windows_App.ScribesListUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:Fieldscribe_Windows_App"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="500">
+
+    <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top" Background="LightSlateGray">
+                <StackPanel Orientation="Horizontal" Margin="10 0">
+                    <materialDesign:PackIcon Kind="Plus" Width="25" Height="25" VerticalAlignment="Center"/>
+                    <MenuItem Header="_Add" Click="MenuItem_Click" FontSize="16" FontWeight="DemiBold" Padding="4"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="10 0">
+                    <materialDesign:PackIcon Kind="Help" Width="15" Height="15" VerticalAlignment="Center" Margin="5"/>
+                    <MenuItem Header="_Help" Click="Help_Click" FontSize="16" FontWeight="DemiBold" Padding="4"/>
+                </StackPanel>
+            </Menu>
+            <ListView ScrollViewer.CanContentScroll="False" MaxHeight="1500" Margin="0" x:Name="Scribes" Background="#2e3137" Foreground="White" FontSize="14" Style="{DynamicResource ListViewStyle1}">
+                <ListView.ItemContainerStyle>
+                    <Style>
+                        <Style.Triggers>
+                            <Trigger Property="Control.IsMouseOver" Value="True">
+                                <Setter Property="Control.Background" Value="Transparent" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </ListView.ItemContainerStyle>
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Assign" Width="auto" DisplayMemberBinding="{Binding MeetId}" />
+                        <GridViewColumn Header="First Name" Width="auto" DisplayMemberBinding="{Binding FirstName}" />
+                        <GridViewColumn Header="Last Name" Width="auto" DisplayMemberBinding="{Binding LastName}" />
+                        <GridViewColumn Header="Email" Width="auto" DisplayMemberBinding="{Binding Email}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </DockPanel>
+
+    </Grid>
+</UserControl>

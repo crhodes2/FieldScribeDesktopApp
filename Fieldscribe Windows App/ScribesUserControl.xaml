@@ -1,0 +1,458 @@
+﻿<UserControl x:Class="Fieldscribe_Windows_App.ScribesUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:Fieldscribe_Windows_App"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="650"
+             IsVisibleChanged="UserControl_IsVisibleChanged">
+    <materialDesign:DialogHost x:Name="ScribesDialogHost" Identifier="ScribesDialog">
+        <Grid>
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel Margin="5">
+                    <Border Background="#2e3137" CornerRadius="10" Margin="0,0" Height="auto">
+                        <StackPanel Margin="10,10,10,0">
+
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="350"/>
+                                    <RowDefinition Height="70"/>
+                                </Grid.RowDefinitions>
+
+                                <Grid Grid.Row="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid Grid.Column="2">
+                                        <DockPanel>
+                                            <Button Style="{DynamicResource MaterialDesignToolButton}">
+                                                <materialDesign:PackIcon Foreground="White" Kind="Magnify" Opacity=".99" />
+                                            </Button>
+                                            <TextBox x:Name="ScribesTextFilter" Margin="8 0 0 0" Foreground="White"
+                                     materialDesign:HintAssist.Hint="Search for scribe" 
+                                     materialDesign:TextFieldAssist.DecorationVisibility="Hidden" BorderThickness="0"
+                                     TextChanged="txtFilter_TextChanged"
+                                     MinWidth="200" VerticalAlignment="Center" />
+                                        </DockPanel>
+
+                                    </Grid>
+
+
+                                </Grid>
+
+                                <Grid Grid.Row="1">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <ListBox x:Name="AssignedScribesList" Grid.Column="0" BorderBrush="Gray" BorderThickness="1"
+                               IsEnabled="{Binding Path=MeetSelected, Mode=TwoWay}" 
+                               SelectionChanged="AssignedScribesListBox_SelectionChanged">
+
+                                        <ListBox.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextBlock>
+                                                    <TextBlock.Text>
+                                                        <MultiBinding StringFormat="{}{1}, {0}    ({2})">
+                                                            <Binding Path="FirstName"/>
+                                                            <Binding Path="LastName"/>
+                                                            <Binding Path="Email"/>
+                                                        </MultiBinding>
+                                                    </TextBlock.Text>
+                                                </TextBlock>
+                                            </DataTemplate>
+                                        </ListBox.ItemTemplate>
+                                        <ListBox.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <VirtualizingStackPanel />
+                                            </ItemsPanelTemplate>
+                                        </ListBox.ItemsPanel>
+                                    </ListBox>
+
+                                    <Button Grid.Column ="1" x:Name="AddScribeBtn" Background="Transparent" BorderBrush="Transparent"
+                                    VerticalAlignment="Center" Margin="0,0,0,35" Padding="0,0,0,0" IsEnabled="False"
+                                    ToolTip="Add scribe to meet" Click="AddScribeBtn_Click">
+                                        <materialDesign:PackIcon Foreground="White" Kind="ArrowLeftBold" Opacity=".99"
+                                  Height="30" Width="30"/>
+                                    </Button>
+
+                                    <Button Grid.Column ="1" x:Name="RemoveScribeBtn" Background="Transparent" BorderBrush="Transparent"
+                                    VerticalAlignment="Center" Margin="0,35,0,0" Padding="0,0,0,0" IsEnabled="False"
+                                    ToolTip="Remove scribe from meet" Click="RemoveScribeBtn_Click">
+                                        <materialDesign:PackIcon Foreground="White" Kind="ArrowRightBold" Opacity=".99"
+                                  Height="30" Width="30"/>
+                                    </Button>
+
+
+
+                                    <ListBox x:Name="ScribesList" Grid.Column="2" BorderBrush="Gray" BorderThickness="1"
+                                 IsEnabled="true" SelectionChanged="ScribesListBox_SelectionChanged">
+
+                                        <ListBox.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextBlock>
+                                                    <TextBlock.Text>
+                                                        <MultiBinding StringFormat="{}{1}, {0}    ({2})">
+                                                            <Binding Path="FirstName"/>
+                                                            <Binding Path="LastName"/>
+                                                            <Binding Path="Email"/>
+                                                        </MultiBinding>
+                                                    </TextBlock.Text>
+                                                </TextBlock>
+                                            </DataTemplate>
+                                        </ListBox.ItemTemplate>
+                                    </ListBox>
+                                </Grid>
+
+
+                                <Grid Grid.Row="2">
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="110"/>
+                                        <ColumnDefinition Width="110"/>
+                                        <ColumnDefinition Width="110"/>
+                                        <ColumnDefinition Width="110"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+
+                                    <Button x:Name="RegisterScribeBtn"  
+                                    Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
+                                    Grid.Column="1" Width="40" Padding="0,0,0,0" 
+                                    Background="Transparent" BorderBrush="Transparent" 
+                                    Click="RegisterScribeBtn_Click"        
+                                    ToolTip="Register new scribe">
+
+                                        <Button.CommandParameter>
+                                            <StackPanel Margin="20">
+                                                <Grid>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="*"/>
+                                                        <RowDefinition Height="*"/>
+                                                    </Grid.RowDefinitions>
+
+                                                    <Grid Grid.Row="0">
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="20"/>
+                                                            <ColumnDefinition Width="200"/>
+                                                        </Grid.ColumnDefinitions>
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="Auto"/>
+                                                            <RowDefinition Height="Auto"/>
+                                                            <RowDefinition Height="Auto"/>
+                                                            <RowDefinition Height="Auto"/>
+                                                            <RowDefinition Height="Auto"/>
+                                                            <RowDefinition Height="Auto"/>
+                                                        </Grid.RowDefinitions>
+
+                                                        <materialDesign:PackIcon Kind="Email" Margin="0,0,0,0" Grid.Column="0" Grid.Row="0"
+                                                         VerticalAlignment="Center"/>
+                                                        <TextBox x:Name="EmailTextBox" materialDesign:HintAssist.Hint="Email"
+                                                         Grid.Column="1" Grid.Row="0" Margin="5 5 5 5" FontSize="14"
+                                                         Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+                                                            <TextBox.Text>
+                                                                <Binding Path="Name" UpdateSourceTrigger="PropertyChanged">
+                                                                    <Binding.ValidationRules>
+                                                                        <local:NotEmptyValidationRule ValidatesOnTargetUpdated="True" />
+                                                                    </Binding.ValidationRules>
+                                                                </Binding>
+                                                            </TextBox.Text>
+                                                        </TextBox>
+
+                                                        <materialDesign:PackIcon Kind="Account" Margin="0,0,0,0" 
+                                                        Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" />
+                                                        <TextBox x:Name="FirstNameTextBox" materialDesign:HintAssist.Hint="First Name"
+                                                         Grid.Column="1" Grid.Row="1" Margin="5 5 5 10" FontSize="14"
+                                                         Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+                                                        </TextBox>
+
+                                                        <TextBox x:Name="LastNameTextBox" materialDesign:HintAssist.Hint="Last Name"
+                                                         Grid.Column="1" Grid.Row="2" Margin="5 5 5 10" FontSize="14"
+                                                         Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+                                                        </TextBox>
+
+                                                        <materialDesign:PackIcon Kind="Key" Margin="0,0,0,0" Grid.Column="0" Grid.Row="4"
+                                                       VerticalAlignment="Center" />
+                                                        <PasswordBox x:Name="PasswordTextBox" materialDesign:HintAssist.Hint="Pasword" 
+                                                         Grid.Column="1" Grid.Row="4" Margin="5 5 5 10" FontSize="14"
+                                                         Style="{StaticResource MaterialDesignFloatingHintPasswordBox}">
+                                                        </PasswordBox>
+
+                                                        <PasswordBox x:Name="PasswordConfirmTextBox" materialDesign:HintAssist.Hint="Confirm Pasword" 
+                                                       Grid.Column="1" Grid.Row="5" Margin="5 5 5 5" FontSize="14"
+                                                       Style="{StaticResource MaterialDesignFloatingHintPasswordBox}">
+                                                        </PasswordBox>
+                                                    </Grid>
+
+                                                    <Grid Grid.Row="1">
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="*"/>
+                                                            <ColumnDefinition Width="*"/>
+                                                        </Grid.ColumnDefinitions>
+
+                                                        <Button x:Name="RegisterScribeCreateBtn" Grid.Column="0" Margin="0,20,0,0"
+                                                        Style="{StaticResource MaterialDesignFlatButton}"
+                                                        Click="RegisterScribeCreateBtn_Click"
+                                                        >CREATE</Button>
+
+                                                        <Button Grid.Column="1" Margin="0,20,0,0"
+                                                        Style="{StaticResource MaterialDesignFlatButton}" IsCancel="True"   
+                                                        Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+                                                        >CANCEL</Button>
+                                                    </Grid>
+                                                </Grid>
+                                            </StackPanel>
+                                        </Button.CommandParameter>
+
+                                        <materialDesign:PackIcon Foreground="White" Kind="AccountPlus" Opacity=".99"
+                                    Height="25" Width="25"/>
+
+                                    </Button>
+
+
+                                    <Button x:Name="DeleteScribeBtn"
+                                    Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
+                                    Grid.Column="2" Width="40" Padding="0,0,0,0"
+                                    Background="Transparent" BorderBrush="Transparent"
+                                    Click="DeleteScribeBtn_Click"        
+                                    ToolTip="Delete selected scribe account">
+
+                                        <Button.CommandParameter>
+
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="50"/>
+                                                    <RowDefinition Height="50"/>
+                                                </Grid.RowDefinitions>
+
+                                                <TextBlock Grid.Row="0" Text="Are you sure?" 
+                                                FontSize="16" Margin="0,20,0,0"
+                                                HorizontalAlignment="Center"/>
+
+                                                <Grid Grid.Row="1">
+
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                    </Grid.ColumnDefinitions>
+
+                                                    <Button x:Name="DeleteScribeYesBtn" Grid.Column="0" Width="70"
+                                                        Style="{StaticResource MaterialDesignFlatButton}"
+                                                        Click="DeleteScribeBtn_Click">
+                                                        YES</Button>
+
+                                                    <Button Grid.Column="1"
+                                                        Style="{StaticResource MaterialDesignFlatButton}" 
+                                                        Width="90"  Padding="0,0,0,0"  IsCancel="True" 
+                                                        Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}">
+                                                        CANCEL</Button>
+                                                </Grid>
+
+                                            </Grid>
+                                        </Button.CommandParameter>
+
+                                        <materialDesign:PackIcon Foreground="White" Kind="AccountRemove" Opacity=".99"
+                                  Height="25" Width="25"/>
+                                    </Button>
+
+                                    <Button x:Name="EditScribeBtn"
+                                        Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
+                                        Grid.Column="3" Width="40" Padding="0,0,0,0"
+                                        Background="Transparent" BorderBrush="Transparent"
+                                        Click="EditScribeBtn_Click"    
+                                        ToolTip="Edit user name">
+
+                                        <Button.CommandParameter>
+                                            <StackPanel Margin="20">
+                                                <Grid>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="*"/>
+                                                        <RowDefinition Height="*"/>
+                                                    </Grid.RowDefinitions>
+
+                                                    <Grid Grid.Row="0">
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="20"/>
+                                                            <ColumnDefinition Width="200"/>
+                                                        </Grid.ColumnDefinitions>
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="Auto"/>
+                                                            <RowDefinition Height="Auto"/>
+                                                        </Grid.RowDefinitions>
+
+                                                        <materialDesign:PackIcon Kind="Account" Margin="0,0,0,0" 
+                                                        Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" />
+                                                        <TextBox x:Name="EditFirstNameTextBox" materialDesign:HintAssist.Hint="First Name"
+                                                         Grid.Column="1" Grid.Row="0" Margin="5 5 5 5" FontSize="14"
+                                                         Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+                                                        </TextBox>
+
+                                                        <TextBox x:Name="EditLastNameTextBox" materialDesign:HintAssist.Hint="Last Name"
+                                                         Grid.Column="1" Grid.Row="1" Margin="5 5 5 5" FontSize="14"
+                                                         Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+                                                        </TextBox>
+                                                    </Grid>
+
+                                                    <Grid Grid.Row="1">
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="*"/>
+                                                            <ColumnDefinition Width="*"/>
+                                                        </Grid.ColumnDefinitions>
+
+                                                        <Button x:Name="EditScribeSubmitBtn" Grid.Column="0" Margin="0,20,0,0"
+                                                            Style="{StaticResource MaterialDesignFlatButton}"
+                                                            Click="EditScribeSubmitBtn_Click"
+                                                            >SUBMIT</Button>
+
+                                                        <Button Grid.Column="1" Margin="0,20,0,0"
+                                                            Style="{StaticResource MaterialDesignFlatButton}" IsCancel="True"   
+                                                            Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+                                                            >CANCEL</Button>
+                                                    </Grid>
+                                                </Grid>
+                                            </StackPanel>
+                                        </Button.CommandParameter>
+                                        <materialDesign:PackIcon Foreground="White" Kind="AccountEdit" Opacity=".99"
+                                  Height="25" Width="30"/>
+                                    </Button>
+
+                                    <Button x:Name="ResetPasswordBtn"
+                                    Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}" 
+                                    Grid.Column="4" Width="40" Padding="0,0,0,0"
+                                    Background="Transparent" BorderBrush="Transparent"
+                                    Click="ResetPasswordBtn_Click"        
+                                    ToolTip="Change password">
+
+                                        <Button.CommandParameter>
+                                            <StackPanel Margin="20">
+                                                <Grid>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="*"/>
+                                                        <RowDefinition Height="*"/>
+                                                    </Grid.RowDefinitions>
+
+                                                    <Grid Grid.Row="0">
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="20"/>
+                                                            <ColumnDefinition Width="200"/>
+                                                        </Grid.ColumnDefinitions>
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="Auto"/>
+                                                            <RowDefinition Height="Auto"/>
+                                                        </Grid.RowDefinitions>
+
+                                                        <materialDesign:PackIcon Kind="Key" Margin="0,0,0,0" Grid.Column="0" Grid.Row="0"
+                                                       VerticalAlignment="Center" />
+                                                        <PasswordBox x:Name="ResetPasswordTextBox" 
+                                                         materialDesign:HintAssist.Hint="New Pasword" 
+                                                         Grid.Column="1" Grid.Row="0" Margin="5 5 5 5" FontSize="14"
+                                                         Style="{StaticResource MaterialDesignFloatingHintPasswordBox}">
+                                                        </PasswordBox>
+
+                                                        <PasswordBox x:Name="ConfirmResetPasswordTextBox" 
+                                                       materialDesign:HintAssist.Hint="Confirm New Pasword" 
+                                                       Grid.Column="1" Grid.Row="5" Margin="5 5 5 5" FontSize="14"
+                                                       Style="{StaticResource MaterialDesignFloatingHintPasswordBox}">
+                                                        </PasswordBox>
+                                                    </Grid>
+
+                                                    <Grid Grid.Row="1">
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="*"/>
+                                                            <ColumnDefinition Width="*"/>
+                                                        </Grid.ColumnDefinitions>
+
+                                                        <Button x:Name="ResetPasswordSubmitBtn" Grid.Column="0" Margin="0,20,0,0"
+                                                            Style="{StaticResource MaterialDesignFlatButton}"
+                                                            Click="ResetPasswordSubmitBtn_Click"    
+                                                            >SUBMIT</Button>
+
+                                                        <Button Grid.Column="1" Margin="0,20,0,0"
+                                                            Style="{StaticResource MaterialDesignFlatButton}" IsCancel="True"   
+                                                            Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+                                                            >CANCEL</Button>
+                                                    </Grid>
+                                                </Grid>
+                                            </StackPanel>
+                                        </Button.CommandParameter>
+                                        <materialDesign:PackIcon Foreground="White" Kind="AccountKey" Opacity=".99"
+                                  Height="25" Width="25"/>
+                                    </Button>
+                                </Grid>
+
+                            </Grid>
+
+
+
+                            <!--<Label Content="Add Scribe" VerticalContentAlignment="Center" Foreground="White" FontSize="25" HorizontalAlignment="Center" />
+                    <Grid VerticalAlignment="Top" Height="242">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <materialDesign:PackIcon Kind="Account" Margin="0,0,0,0" Foreground="White" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" />
+                        <TextBox x:Name="FNameTextBox" materialDesign:HintAssist.Hint="First Name" Foreground="White" Grid.Column="1" Grid.Row="0">
+                            <TextBox.Text>
+                                <Binding Path="Name" UpdateSourceTrigger="PropertyChanged">
+                                </Binding>
+                            </TextBox.Text>
+                        </TextBox>
+                        
+                        <TextBox x:Name="LNameTextBox" materialDesign:HintAssist.Hint="Last Name" Foreground="White" Grid.Column="1" Grid.Row="1">
+                            <TextBox.Text>
+                                <Binding Path="Name" UpdateSourceTrigger="PropertyChanged">
+                                </Binding>
+                            </TextBox.Text>
+                        </TextBox>
+
+                        <materialDesign:PackIcon Kind="Email" Margin="0,0,0,0" Grid.Column="0" Grid.Row="2" Foreground="White" VerticalAlignment="Center" RenderTransformOrigin="0.469,5.063" />
+                        <TextBox x:Name="EmailTextBox" materialDesign:HintAssist.Hint="Email" Foreground="White" Grid.Column="1" Grid.Row="2">
+                            <TextBox.Text>
+                                <Binding Path="Name" UpdateSourceTrigger="PropertyChanged">
+                                </Binding>
+                            </TextBox.Text>
+                        </TextBox>
+
+                        <materialDesign:PackIcon Kind="Earth" Margin="0,0,0,0" Grid.Column="0" Grid.Row="3" Foreground="White" VerticalAlignment="Center" RenderTransformOrigin="0.469,5.063" />
+                        <TextBox x:Name="MeetTextBox" materialDesign:HintAssist.Hint="Meet" Foreground="White" Grid.Column="1" Grid.Row="3">
+                            <TextBox.Text>
+                                <Binding Path="Meet" UpdateSourceTrigger="PropertyChanged">
+                                </Binding>
+                            </TextBox.Text>
+                        </TextBox>
+
+                        <materialDesign:PackIcon Kind="Lock" Margin="0,0,0,0" Grid.Column="0" Grid.Row="4" Foreground="White" VerticalAlignment="Center" />
+                        <TextBox x:Name="PassTextBox" materialDesign:HintAssist.Hint="Pasword" Foreground="White" Grid.Column="1" Grid.Row="4">
+                            <TextBox.Text>
+                                <Binding Path="Password" UpdateSourceTrigger="PropertyChanged">
+                                </Binding>
+                            </TextBox.Text>
+                        </TextBox>
+                        <Button Margin="0,10,0,10" Grid.Column="1" Grid.Row="6">Submit</Button>
+                    </Grid>-->
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </materialDesign:DialogHost>
+</UserControl>

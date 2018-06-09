@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fieldscribe Windows App", "Fieldscribe Windows App\Fieldscribe Windows App.csproj", "{7E2BB208-616E-4782-B753-95B8CAFD0EA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Field Scribe Windows App Unit Test", "FieldScribeWindowsAppUnitTest\Field Scribe Windows App Unit Test.csproj", "{FACCE3BF-7A0C-405A-8DC0-649B0A859F73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E2BB208-616E-4782-B753-95B8CAFD0EA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E2BB208-616E-4782-B753-95B8CAFD0EA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E2BB208-616E-4782-B753-95B8CAFD0EA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E2BB208-616E-4782-B753-95B8CAFD0EA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FACCE3BF-7A0C-405A-8DC0-649B0A859F73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FACCE3BF-7A0C-405A-8DC0-649B0A859F73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FACCE3BF-7A0C-405A-8DC0-649B0A859F73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FACCE3BF-7A0C-405A-8DC0-649B0A859F73}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7854C0E9-3B47-46C4-82E3-43212FE4D86E}
+	EndGlobalSection
+EndGlobal

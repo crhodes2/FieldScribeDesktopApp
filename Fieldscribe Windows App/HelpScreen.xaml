@@ -1,0 +1,40 @@
+﻿<Window      
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fieldscribe_Windows_App"
+        xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero"
+        xmlns:Themes1="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2" x:Class="Fieldscribe_Windows_App.HelpScreen"
+        mc:Ignorable="d"
+        Title="Field Scribe" Height="500" Width="400" Background="#2e3137"
+        Icon="/Images/logo0_1_for_icon_Mxt_icon.ico"
+        ResizeMode="NoResize" Closing="Window_Closing">
+    <Grid>
+        <StackPanel>
+            <Border Background="#2e3137" CornerRadius="20" Margin="20">
+                <StackPanel Margin="20">
+                    <Label Content="Help" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
+                    <Separator></Separator>
+                    <Label Content="Selecting a Meet" Foreground="White"/>
+                    <TextBlock Name="SelectMeetHelp" Foreground="White" TextAlignment="Center" TextWrapping="Wrap">
+                             To select a meet go to the home screen. Scroll down to the name of the event you want to view details of and click on that row. 
+                                This will bring you to the meet deatils page for that meet.
+                    </TextBlock>
+                    <Separator></Separator>
+                    <Label Content="Create a Meet" Foreground="White"/>
+                    <TextBlock Name="CreateMeetHelp" Foreground="White" TextAlignment="Center" TextWrapping="Wrap">
+                            The Creat meet screen is gotten to by clicking the Create button on the select meet screen menu, then select New Meet. 
+                            On the Create screen you can add a meet to the list by filling in the details about the new meet.
+                            When all fields are filled correctly click sumbit to save the meet and return to the select meet page.
+                    </TextBlock>
+                    <Separator></Separator>
+                    <Label Content="Meet Detail" Foreground="White"/>
+                    <TextBlock Name="MeetDetailsHelp" Foreground="White" TextAlignment="Center" TextWrapping="Wrap">
+                            The Details screen is accessed by clicking on a meet in the selection screen. Here you will find the meet name, date and location that the meet will take place at.
+                    </TextBlock>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,205 @@
+﻿<Window x:Class="Fieldscribe_Windows_App.FieldScribeModernDesign"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:Control="clr-namespace:Fieldscribe_Windows_App"
+        mc:Ignorable="d"
+        ResizeMode="CanResize" Width="800" Height="600"
+        Title="Field Scribe" MinHeight="400" MinWidth="850"
+        WindowStyle="SingleBorderWindow" WindowStartupLocation="CenterScreen" 
+        Icon="/Images/logo0_1_for_icon_Mxt_icon.ico" Background="Black">
+    <Window.Resources>
+
+            <Storyboard x:Key="OpenMenu">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="gridMain">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="250"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="gridMain">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="50"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="stackPanelMenu">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="250"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="listViewItemSetup">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-250"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-250"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="listViewItemDetails">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-250"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-250"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="listViewItemScribes">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-250"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-250"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="CloseMenu">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="gridMain">
+                <EasingDoubleKeyFrame KeyTime="0" Value="250"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="gridMain">
+                <EasingDoubleKeyFrame KeyTime="0" Value="50"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="stackPanelMenu">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="250"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="OpenMenuBtn">
+            <BeginStoryboard Storyboard="{StaticResource OpenMenu}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="closeMenuBtn">
+            <BeginStoryboard Storyboard="{StaticResource CloseMenu}"/>
+        </EventTrigger>
+    </Window.Triggers>
+
+    <materialDesign:DialogHost x:Name="RootDialogHost" Identifier="RootDialog">
+        <Grid Background="Black">
+        <StackPanel x:Name="stackPanelMenu" Width="250" HorizontalAlignment="Left" Margin="-250 0 0 0" RenderTransformOrigin="0.5,0.5" Background="#2e3137">
+            <StackPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </StackPanel.RenderTransform>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="100" HorizontalAlignment="Center">
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="50" Height="50" Padding="0" Margin="10" Background="{x:Null}" BorderBrush="{x:Null}">
+                    <materialDesign:PackIcon Kind="Settings" Width="40" Height="40"/>
+                </Button>
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Name="informationBtn"  Width="50" Height="50" Padding="0" Margin="10" Background="{x:Null}" BorderBrush="{x:Null}" Click="informationBtn_Click">
+                    <materialDesign:PackIcon Kind="InformationOutline" Width="40" Height="40"/>
+                </Button>
+            </StackPanel>
+            <ListView>
+                <ListViewItem x:Name="listViewItemSetup" Height="60" RenderTransformOrigin="0.5,0.5" Selected="listViewItemSetup_Selected">
+                    <ListViewItem.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ListViewItem.RenderTransform>
+                    <StackPanel Orientation="Horizontal" Margin="10 0">
+                        <materialDesign:PackIcon Kind="Home" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
+                        <TextBlock Text="Setup" Margin="10" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem x:Name="listViewItemDetails" Height="60" RenderTransformOrigin="0.5,0.5" Selected="listViewItemDetails_Selected">
+                    <ListViewItem.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ListViewItem.RenderTransform>
+                    <StackPanel Orientation="Horizontal" Margin="10 0">
+                        <materialDesign:PackIcon Kind="Details" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
+                        <TextBlock Text="Details" Margin="10" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem x:Name="listViewItemScribes" Height="60" RenderTransformOrigin="0.5,0.5" Selected="listViewItemScribes_Selected">
+                    <ListViewItem.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ListViewItem.RenderTransform>
+                    <StackPanel Orientation="Horizontal" Margin="10 0">
+                        <materialDesign:PackIcon Kind="Pencil" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
+                        <TextBlock Text="Scribes" Margin="10" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ListViewItem>
+            </ListView>
+            <Button x:Name="LogOut" Content="Log Out" Margin="0,60,9.6,30" Background="#FF11191F" BorderBrush="#FF0D497C" Foreground="White"
+                   Click="LogOut_Click" />
+        </StackPanel>
+
+        <Grid x:Name="gridMain" Background="Black"  RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="250" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Here is were the panels are placed into the main window -->
+            <Control:SetupUserControl x:Name="setupPanel" Visibility="Visible" Height="Auto"/>
+            <Control:DetailsUserControl x:Name="detailsPanel" Visibility="Collapsed" Height="Auto"/>
+            <Control:ScribesUserControl x:Name="scribesPanel" Visibility="Collapsed" Height="Auto"/>
+
+            <Grid Grid.Column="1" Background="#2e3137" Margin="0,0,0,0">
+                <Image Height="150" VerticalAlignment="Top" Source="Images/logo0.1.PNG" Stretch="UniformToFill"/>
+                <StackPanel Margin="0,225,0,50">
+                    <Grid Height="Auto" Margin="20 50 20 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="MEET NAME" VerticalAlignment="Bottom" Foreground="#FFFBFBFF" Margin="5,10,5,5" Grid.Row="0"/>
+                        <TextBlock x:Name="MeetNameTxt" Text="{Binding Path=SelectedMeet.MeetName, Mode=TwoWay}" FontSize="14"
+                                   VerticalAlignment="Bottom" Foreground="#FFFBFBFF" Margin="10,0,9.778,14.222" Grid.RowSpan="2" />
+                        <TextBlock Text="LOCATION" VerticalAlignment="Bottom" Foreground="#FFFBFBFF" Margin="5,10,5,5" Grid.Row="2"/>
+                        <TextBlock Text="{Binding Path=SelectedMeet.MeetLocation, Mode=TwoWay}" FontSize="14" 
+                                   VerticalAlignment="Top" Foreground="#FFFBFBFF" Grid.Row="3" Margin="10 0" />
+                        <TextBlock Text="DATE" VerticalAlignment="Bottom" Foreground="#FFFBFBFF" Margin="5,10,5,5" Grid.Row="4"/>
+                        <TextBlock Text="{Binding Path=SelectedMeet.MeetDate, Mode=TwoWay, StringFormat=Date: {0:MM/dd/yyyy}}" FontSize="14" 
+                                   VerticalAlignment="Top" Foreground="#FFFBFBFF" Grid.Row="5" Margin="10 0" />
+
+                    </Grid>
+                </StackPanel>
+            </Grid>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="closeMenuBtn" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="1" Click="closeMenuBtn_Click" Visibility="Collapsed">
+                    <materialDesign:PackIcon Kind="Menu" Foreground="Gray"/>
+                </Button>
+                <Button x:Name="OpenMenuBtn" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="1" Click="OpenMenuBtn_Click">
+                    <materialDesign:PackIcon Kind="Menu" Foreground="Gray"/>
+                </Button>
+            </Grid>
+        </Grid>
+    </Grid>
+    </materialDesign:DialogHost>
+</Window>
